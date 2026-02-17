@@ -1,0 +1,105 @@
+<section class="feature-section">
+  <div class="intro">
+    <h1>OPLEVELSER TIL FORSTÅELSE</h1>
+    <p>
+      Oplevelse til forståelse samler vi tre kampagner, der hver på deres måde skaber indsigt gennem ærlighed, menneskelighed og erfaringer. De tre nedenstående kampanger formidler autentiske oplevelser, gode råd og mulighed for refleksion, læring og dialog. Fælles for kampagnerne er ønsket om at bringe virkelige erfaringer tættere på – og omsætte dem til ny forståelse og læring. 
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <img src="/Imgs/SIRK.webp" alt="Billede" />
+      <h3>SAND I RØVSPRÆKKEN</h3>
+      <p>Har andre unge i branchen samme udfordringer som dig?</p>
+    </article>
+
+    <article class="card">
+      <img src="/Imgs/10T.webp" alt="Billede" />
+      <h3>10 TING BY YCDK</h3>
+      <p>Gode råd til dig som ny i branchen</p>
+    </article>
+
+    <article class="card">
+      <img src="/Imgs/ATA.webp" alt="Billede" />
+      <h3>ANSIGT TIL ANSIGT</h3>
+      <p>En dør ind til branchens topkreative</p>
+    </article>
+  </div>
+</section>
+
+<style>
+.feature-section {
+  grid-column: span 3;
+  padding: 120px 40px;
+}
+
+/* Intro tekst */
+.intro {
+  grid-column: 2 / span 1;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 80px auto;
+}
+
+.intro h1 {
+  margin-bottom: 16px;
+}
+
+/* Cards grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  grid-column: 2 / span 1;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin-top: 16px;
+}
+
+.card p {
+  color: #666;
+}
+
+/* 📱 MOBILE FEATURE CARDS */
+@media (max-width:1200px){
+
+  .cards{
+    display:grid;
+    grid-template-columns:1fr;   /* 👈 én kolonne */
+    gap:40px;
+  }
+
+  .card{
+    text-align:left;
+  }
+
+ .card img{
+    width:85%;        /* 👈 gør billedet mindre */
+    margin:0 auto;    /* 👈 centrer */
+    display:block;
+    max-height: 360px;
+    object-fit: cover;
+  }
+.cards{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    text-align:center;      /* 👈 centrer al tekst */
+    align-items:center;
+  }
+
+  .card img{
+    width:85%;
+    margin:0 auto;
+    display:block;
+  }
+}
+  
+</style>

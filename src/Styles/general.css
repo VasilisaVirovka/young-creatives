@@ -1,0 +1,164 @@
+/* =========================
+   FONTS – YCDK BRAND MANUAL
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Montserrat+Alternates:wght@300;900&display=swap');
+
+
+/* =========================
+   RESET / BASE
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300; /* Light = brødtekst */
+  background-color: #ffffff;
+  color: #01090f;
+  line-height: 1.4;
+}
+
+
+/* =========================
+   TYPOGRAFI
+========================= */
+
+/* Headers = Montserrat Bold */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* Event overskrifter / logo */
+.event-font {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 900; /* Black */
+}
+
+/* Alternates Light hvis nødvendigt */
+.event-light {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+}
+
+
+/* =========================
+   LINKS & BUTTON BASICS
+========================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================
+   HERO BASE (optional hjælp)
+========================= */
+
+.hero {
+  background-color: transparent;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ /* * {
+  outline: 1px solid red;
+}  */
+  /* Til troubleshooting */
+
+
+
+
+
+/* 📱 HERO MOBILE */
+@media (max-width:1200px){
+
+  /* HERO SECTION */
+  .hero{
+    display:block;              /* ❗ slår desktop grid fra */
+    position:relative;
+    min-height:100vh;
+    padding-inline:0;
+  }
+
+  /* NAVBAR */
+  nav{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px;
+    z-index:5;
+
+    grid-column:unset;          /* ❗ fjerner subgrid begrænsning */
+  }
+
+  /* LOGO */
+  .logo{
+    width:60px;
+    height:60px;
+    font-size:14px;
+  }
+
+  /* HERO TEXT CONTAINER */
+  .hero-text{
+    /* position:absolute;
+    top:62%;
+    left:50%;
+    transform:translate(-50%, -50%); */
+    /* Fjernet fordi det skabte overflow på x axe */
+    width:90%;
+    text-align:center;
+    color:#fff;
+  }
+
+  /* TITLE */
+  .hero-title{
+    font-size:48px;
+    line-height:1;
+    transform:rotate(-6deg);
+    letter-spacing:-1px;
+  }
+
+  /* SUBTEXT */
+  .hero-sub{
+    margin-top:40px;
+    font-size:18px;
+    font-weight:600;
+  }
+
+}

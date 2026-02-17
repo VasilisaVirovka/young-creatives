@@ -1,0 +1,59 @@
+---
+import Button from "./Button.astro";
+import bannerImg from "../assets/MID.webp"; 
+/* skift til dit nye billede hvis det hedder noget andet */
+---
+
+<section
+  class="banner"
+  style={`background-image: url("${bannerImg.src}")`}
+>
+  <div class="banner-content">
+    <h2>Læs om vores kommende events</h2>
+
+    <Button buttonText="KALENDER" />
+  </div>
+</section>
+
+<style>
+.banner {
+  position: relative;
+  grid-column: span 3;
+  height: 600px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 👇 overlay så billedet bliver lysere som i design */
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(200, 215, 225, 0.65);
+}
+
+.banner-content {
+  position: relative; /* vigtigt så den ligger OVER overlay */
+  text-align: center;
+  color: white;
+  max-width: 600px;
+}
+
+.banner-content h2 {
+  font-size: 48px;
+  margin-bottom: 4px;
+}
+.banner {
+  margin-bottom: 20px;
+}
+.banner-content h2 {
+  margin-bottom: 42px;
+}
+
+</style>

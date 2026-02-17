@@ -1,0 +1,104 @@
+---
+import MenuButton from "./MenuButton.astro";
+import heroImg from "../assets/HERO.webp";
+---
+
+<section
+  class="hero"
+  style={`background-image: url("${heroImg.src}")`}
+>
+  <nav>
+    <span class="logo">
+      YC<br />
+      DK
+    </span>
+
+    <MenuButton buttonText="MENU" />
+  </nav>
+
+  <div class="hero-text">
+    <h1 class="event-font hero-title">
+      YOUNG<br />
+      CREATIVES<br />
+      DENMARK
+    </h1>
+
+    <p class="hero-sub">
+      Sammen om det kreative
+    </p>
+  </div>
+</section>
+
+<style>
+.hero {
+  position: relative;
+  height: 788px;
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 /  4;
+  align-items: flex-start;
+  margin-top: 48px;
+}
+
+nav span {
+  margin: 20px;
+} 
+
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+  background-color: #24547C;
+  color: #fff;
+
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-text {
+  /* position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  text-align: center;
+  color: #fff;
+  grid-column: 2;
+  place-self: center;;
+}
+
+.hero-title {
+  font-size: 110px;
+  line-height: 0.9;
+  transform: rotate(-8deg);
+  letter-spacing: -2px;
+}
+
+.hero-sub {
+  margin-top: 100px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 60px;
+  }
+}
+</style>

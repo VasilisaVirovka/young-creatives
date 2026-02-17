@@ -1,17 +1,37 @@
 ---
+import OO from "../assets/OO.webp";
+import BigCard from "../components/BigCard.astro";
+import Heading from "../components/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+import "../Styles/general.css";
+import FeatureSection from "../components/FeatureSection.astro";
+import BannerSection from "../components/BannerSection.astro";
+import MIS from "../assets/MIS.webp";
+
 
 ---
+	<Layout>		
+		<FeatureSection />
+		<BannerSection />
+		<Heading />
+		<BigCard
+  placeholder={OO}
+  buttonText="OM YCDK"
+  order={1}
+  title="OM YOUNG CREATIVES DENMARK"
+  text="Young Creative Denmark er et kreativt bureau, der udvikler kampagner og kommunikation med fokus på unge målgrupper. "
+/>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BigCard
+  placeholder={MIS}
+  buttonText="LÆS MERE"
+  order={-1}
+  title="VORES MISSION"
+  text="Vi kombinerer indsigt, strategi og kreativitet for at skabe autentiske fortællinger, der engagerer og gør en forskel. Vores arbejde bygger på ærlighed, innovation og forståelsen af, hvad der virkelig bevæger unge i dag.
+"
+/>
+
+
+		
+	</Layout>    
+

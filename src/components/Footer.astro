@@ -1,0 +1,143 @@
+---
+import footer from "../assets/footer.webp";
+---
+
+
+<section
+  class="footer"
+  style={`background-image: url("${footer.src}")`}
+>
+
+  <div class="footer-inner">
+
+    <!-- VENSTRE SIDE -->
+    <div class="footer-left">
+      <h2 class="footer-title event-font">
+        YOUNG<br />
+        CREATIVES<br />
+        DENMARK
+      </h2>
+
+      <p class="footer-text">
+        Young Creatives Denmark er et kreativt bureau og fællesskab, der udvikler idéer, kampagner og visuel kommunikation med fokus på unge målgrupper.
+      </p>
+    </div>
+
+    <!-- HØJRE SIDE -->
+    <div class="footer-right">
+
+      <div class="footer-col">
+        <h4>Socials</h4>
+       <p>
+  <a href="https://www.facebook.com/youngcreativesdk" target="_blank">
+    Facebook
+  </a>
+</p>
+
+       <p>
+  <a href="https://www.instagram.com/youngcreativesdenmark/" target="_blank">
+    Instagram
+  </a>
+</p>
+
+ <p>
+  Youtube:
+  <a href="https://youtube.com/shorts/l3GUXWLEY0I?feature=share" target="_blank">
+    <em> Nyt content</em>
+  </a>
+</p>
+
+
+
+      </div>
+
+      <div class="footer-col">
+        <h4>Telefon</h4>
+       <p>
+  <a href="tel:+4560914326">
+    +45 60 91 43 26
+  </a>
+</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Adresse</h4>
+
+        <p>
+  <a 
+    href="https://www.google.com/maps/search/?api=1&query=Jacob Cameron Brook,
+Landskronagade 27, st.,
+2100 København Ø"
+    target="_blank"
+  >
+  Jacob Cameron Brook,<br />
+          Landskronagade 27, st.,<br />
+          2100 København Ø
+  </a>
+</p>
+
+       
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.footer {
+  background-color: #c16a9e9c;
+  grid-column: 1 / span 3;
+  margin-top: 75px;
+  padding: 80px 0;
+}
+
+.footer-inner {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  padding: 0 60px; /* 👈 giver luft venstre + højre */
+}
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+}
+/* VENSTRE */
+.footer-left {
+  color: white;
+}
+
+.footer-title {
+  font-size: 38px;
+  line-height: 0.9;
+  transform: rotate(-8deg);
+  margin-bottom: 80px;
+}
+
+.footer-text {
+  max-width: 320px;
+}
+
+/* HØJRE */
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-col h4 {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.footer-col p {
+  margin: 0;
+}
+</style>
+

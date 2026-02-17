@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+
+const { placeholder, buttonText, order, title, text } = Astro.props;
+---
+
+<section class="feature">
+  <Image src={placeholder} alt="Beskrivende tekst" class="placeholder" />
+
+  <div class="content">
+    <h2>{title}</h2>
+    <p>{text}</p>
+    <Button buttonText={buttonText} />
+  </div>
+</section>
+
+<style define:vars={{ order }}>
+
+  /* 👇 FIX: undgå at billedet strækkes */
+  .placeholder {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .content {
+    order: var(--order);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column: 2 / span 1;
+    gap: 5rem;
+    margin-top: 120px;
+  }
+
+  /* 📱 MOBILE */
+  @media (max-width:1200px){
+
+    .feature{
+      grid-template-columns:1fr;
+    }
+
+    .content{
+      order:0;              /* behold din mobil rækkefølge */
+      align-items:center;
+      text-align:center;
+    }
+
+    .placeholder{
+      max-height:760px;
+    }
+
+  }
+
+</style>
+
